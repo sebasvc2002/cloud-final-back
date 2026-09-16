@@ -1,0 +1,12 @@
+{
+  "name": "backend-simple",
+  "version": "1.0.0",
+  "description": "Backend de prueba con dos endpoints sencillos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
