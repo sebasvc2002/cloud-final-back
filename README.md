@@ -49,3 +49,7 @@ Si vas a probar este backend desde Postman fuera de la VM, recuerda abrir el pue
 ```bash
 sudo ufw allow 3000
 ```
+
+## Despliegue en AWS
+
+El workflow de GitHub Actions se autentica con AWS mediante OIDC. Configura el secreto `AWS_ROLE_ARN` con el ARN del rol de despliegue. El rol debe confiar en el proveedor OIDC `token.actions.githubusercontent.com` con audiencia `sts.amazonaws.com` y el asunto `repo:sebasvc2002/cloud-final-back:ref:refs/heads/main`. Dale permiso `ecr:GetAuthorizationToken` y, para el repositorio `cloud-final-back`, `ecr:BatchCheckLayerAvailability`, `ecr:CompleteLayerUpload`, `ecr:InitiateLayerUpload`, `ecr:PutImage` y `ecr:UploadLayerPart`.
