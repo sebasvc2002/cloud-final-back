@@ -10,7 +10,7 @@ env:
   ECR_REPOSITORY: cloud-final-back
   ECS_CLUSTER: cloud-final-cluster
   ECS_SERVICE: cloud-final-service
-  ECS_TASK_DEFINITION: cloud-final-task
+  ECS_TASK_DEFINITION: default-cloud-final-back-bd49:1
   CONTAINER_NAME: cloud-final-container
 
 jobs:
